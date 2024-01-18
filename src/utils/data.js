@@ -11,6 +11,7 @@ export const heroData = [
 ];
 
 export const categories =[
+    // {id: 1, name: "Chicken", urlParamName: "chicken"},
     {id: 1, name: "Chicken", urlParamName: "chicken"},
     {id: 2, name: "Curry", urlParamName: "curry"},
     {id: 3, name: "Rice", urlParamName: "rice"},

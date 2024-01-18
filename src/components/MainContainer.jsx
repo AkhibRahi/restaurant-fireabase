@@ -5,6 +5,7 @@ import {MdChevronLeft, MdChevronRight} from 'react-icons/md'
 import RowContainer from "./RowContainer";
 import { useStateValue } from "../context/StateProvider";
 import MenuContainer from "./MenuContainer";
+import CartContainer from "./CartContainer";
 
 function MainContainer() {
 
@@ -33,7 +34,7 @@ function MainContainer() {
             <motion.div
               whileTap={{ scale: 0.75 }}
               className="w-8 h-8 rounded-lg bg-orange-300 hover:bg-orange-500 cursor-pointer
-            transition-all duration-100 ease-in-out hover:shadow-lg flex items-center justify-center"
+             hover:shadow-lg flex items-center justify-center"
             >
               <MdChevronLeft onClick={()=> setScrollValue(-200)} className="text-lg text-white"/>
             </motion.div>
@@ -53,6 +54,9 @@ function MainContainer() {
       <section className="w-full my-6">
 
       </section>
+
+      <CartContainer/>
+
     </div>
   );
 }
