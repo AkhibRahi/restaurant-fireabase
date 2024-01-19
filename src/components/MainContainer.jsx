@@ -9,13 +9,13 @@ import CartContainer from "./CartContainer";
 
 function MainContainer() {
 
-  const [{foodItems}, dispatch ] = useStateValue()
+  const [{foodItems, cartShow}, dispatch ] = useStateValue()
 
   const [scrollValue, setScrollValue] = useState(0)
 
   useEffect(()=>{
 
-  },[scrollValue])
+  },[scrollValue, cartShow])
 
   return (
     <div className="w-full h-auto flex flex-col justify-center items-center">
@@ -51,11 +51,13 @@ function MainContainer() {
       </section>
 
       <MenuContainer/>
-      <section className="w-full my-6">
+      {/* <section className="w-full my-6">
 
-      </section>
+      </section> */}
 
+      {cartShow && 
       <CartContainer/>
+      }
 
     </div>
   );
